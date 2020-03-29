@@ -53,6 +53,8 @@ All analysis for this paper is avilable at my Github profile and the original da
 ![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
 <center>
 
+***
+
 ```{r}
 data <- read.dta13("Ideology_Trump.dta")
 
@@ -96,10 +98,8 @@ model4 <- lm(Support ~ libtrump*ideo5b + contrump*ideo5b + knowledge
 # The outcome of Model 4 shows us that those who identify as strongly conservative are more likely to respond to Trump cues, whether liberal or conservative.
 ```
 
-<br>
-
 *My stargazer figure:*
-```{r, results= "asis", fig.align="center"}
+```{r, results= "asis"}
 cat("\\begin{table}[!htbp]")
 cat("\\centering")
 cat("\\caption{OLS Regression Results by Metal Level}")
