@@ -100,15 +100,26 @@ model4 <- lm(Support ~ libtrump*ideo5b + contrump*ideo5b + knowledge
 
 *My stargazer figure:*
 ```{r, results= "asis", fig.align="center"}
+cat("\\begin{table}[!htbp]")
+cat("\\centering")
+cat("\\caption{OLS Regression Results by Metal Level}")
+cat("\\label{OLS}")
+cat("\\scalebox{.7}{")
+
 stargazer(model1, model2, model3, model4, 
           type = "latex", 
           summary = FALSE, 
           title = "Interaction Models, Including Control Variables", 
           column.labels = c("Knowledge", "Party Strength", "Trump Approval", "Ideology"), 
           covariate.labels = c("Liberal Treatment", "Knowledge", "Conservative Treatment", "Trump Approval", "Ideology", "Republican", "Party Strength", "White", "Liberal treat * Knowledge", "Conservative treat * Knowledge", "Liberal treat * Party Strength", "Conservative treat * Party Strength", "Liberal treat * Trump Approval", "Conservative treat * Trump Approval", "Liberal treat * Ideology", "Conservative treat * Ideology"), 
-          column.sep.width = "-15pt",
+          column.sep.width = "-10pt",
           font.size = "small", 
-          omit.stat = "all")
+          omit.stat = "all", 
+          float = FALSE)
+
+cat("}") # for the end of the scalebox
+cat("\\end{table}")
+
 
 ```
 
