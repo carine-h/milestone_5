@@ -52,9 +52,7 @@ All analysis for this paper is avilable at my Github profile and the original da
 <center>
 ![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
 <center>
-
 ***
-
 ```{r}
 data <- read.dta13("Ideology_Trump.dta")
 
